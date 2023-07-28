@@ -15,4 +15,5 @@ This was inspired by the header on https://www.superlist.com/ which is genuinely
 - The text won't be selectable with `user-select: none`
 - We must select a background color which maintains high readablitiy of both black and white text
 - To ensure that the left text is not visible when the width of the left panel is reduced use `overflow: hidden`
+- Used the fonts Rubik, Borel, and Satisfy after linking with Google fonts.
 - The text is centred vertically by ensuring that the two sides take up the full height of the screen and then usinng `display: grid` along with `place-items: center` to turn each panel into a CSS Grid and then place their singular element in the centre of that grid
