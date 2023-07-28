@@ -4,7 +4,7 @@ This repository is a collection of cool elements that I created using HTML/CSS a
 
 ## 1. Dualtone Header
 
-This was inspired by the header on https://www.superlist.com/ which is genuinely a very pretty website.
+This was inspired by the header on [Superlist](https://www.superlist.com/) website which is genuinely a very pretty website.
 
 ### Implementation details:
 - We have a left-side and right-side
