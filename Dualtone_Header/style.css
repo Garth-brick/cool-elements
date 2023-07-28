@@ -1,0 +1,58 @@
+:root {
+    --dark-gray-color: #202020;
+    --bright-blue-color: #69c3ff;
+    --white-color: #fff;
+    --orange-color: #de7200;
+}
+
+body {
+    background-color: var(--orange-color);
+    margin: 0px;
+}
+
+.side {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    /* look further into this overflow: hidden thing */
+    overflow: hidden; 
+}
+
+#left-side {
+    background-color: var(--bright-blue-color);
+    /* this z-index puts the left-side on top of the right-side */
+    z-index: 2;
+}
+
+#right-size {
+    background-color: var(--orange-color);
+}
+
+.side .title {
+    color: var(--white-color);
+    font-family: 'Rubik', sans-serif;
+    font-size: 8vw;
+    width: 70vw;
+    margin: 0 15vw;
+    user-select: none;
+}
+
+#left-side .title {
+    color: var(--dark-gray-color)
+}
+
+.side .title .fancy-text {
+    font-family: 'Borel', cursive;
+    line-height: 25vw;
+}
+
+#right-side .fancy-text {
+    font-size: 10vw;
+    color: var(--dark-gray-color);
+}
+
+#left-side .fancy-text {
+    font-size: 11vw;
+    color: var(--white-color);
+}
