@@ -7,7 +7,7 @@ This repository is a collection of cool elements that I created using HTML/CSS a
 This was inspired by the header on [Superlist](https://www.superlist.com/) website which is genuinely a very pretty website.
 
 ### Implementation details:
-- We have a left-side and right-side
+- We have two divs, one for left-side and one for the right-side
 - The right-side is always in the background and the left-side is always on top of it
 - We change the width of the left side to a percentage value depending on the x coordinate of the mouse
 - We ensure that the left-side and the right-side overlap perfectly by using `position: absolute` on them
