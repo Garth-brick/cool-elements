@@ -1,0 +1,113 @@
+:root {
+    --background-color: rgb(20, 20, 20);
+    --card-color: rgba(23, 23, 23);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --card-width: 25vw;
+    --card-height: 15vw;
+    --cards-gap: 1vw;
+    --border-width: 2px;
+    --border-radius: 15px;
+    --card-highlight-color: rgba(255, 255, 255, 0.06);
+    --border-highlight-color: rgba(255, 255, 255, 0.5)
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: var(--border-highlight-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: calc(var(--card-width) / 5);
+}
+
+h1::selection {
+    color: white;
+    background: var(--card-highlight-color);
+    outline: var(--border-highlight-color);
+}
+
+::-webkit-scrollbar {
+    background-color: var(--card-highlight-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--card-highlight-color);
+}
+
+.cards {
+    width: 90vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--cards-gap);
+    padding-bottom: 10px;
+}
+
+.card {
+    background-color: var(--border-color);
+    height: 20vw;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    position: relative;
+    --mouse-x: 0px;
+    --mouse-y: 0px;
+}
+
+/* we change the opacity of the card border whenever there is a hover on the cards wrapper */
+.cards:hover > .card > .card-border {
+    opacity: 1;
+}
+
+/* we change the opacity of an individual card only when it is hovered upon */
+.card:hover::before{
+    opacity: 1;
+}
+
+.card::before, 
+.card > .card-border {
+    content: "";
+    border-radius: inherit;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 500ms;
+    z-index: 2;
+}
+
+.card::before {
+    background: radial-gradient(
+        calc(var(--card-width) * 3) circle at var(--mouse-x) var(--mouse-y),
+        var(--card-highlight-color),
+        transparent 40%
+    );
+    z-index: 3;
+}
+
+.card > .card-border {
+    background: radial-gradient(
+        calc(var(--card-width) * 2) circle at var(--mouse-x) var(--mouse-y),
+        var(--border-highlight-color),
+        transparent 40%
+    );
+    z-index: 1;
+}
+
+.card > .card-content {
+    border-radius: inherit;
+    margin: 1px;
+    height: calc(100% - var(--border-width));
+    width: calc(100% - var(--border-width));
+    background-color: var(--card-color);
+    position: relative;
+    z-index: 2;
+}
