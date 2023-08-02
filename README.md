@@ -2,9 +2,13 @@
 
 This repository is a collection of cool elements that I created using HTML/CSS and vanilla JS. These are mostly just a recreations of interesting stuff that I found online. This README file is used to document the implementation details of each of the projects along with how I resolved the problems I faced in each of the projects.
 
-## 1. Dualtone Header
 
-This was inspired by the header on [Superlist](https://www.superlist.com/) website which is genuinely a very pretty website.
+
+## 1. Interactive Dualtone Header
+
+![dualtone-header](https://github.com/Garth-brick/cool-elements/assets/92771830/543b66d9-66af-483b-805f-f4325e47678d)
+
+This was inspired by the header on [Superlist](https://www.superlist.com/) website which is genuinely a very pretty website worth visiting.
 
 ### Implementation details:
 - We have two divs, one for left-side and one for the right-side
@@ -19,6 +23,10 @@ This was inspired by the header on [Superlist](https://www.superlist.com/) websi
 - Used margins for positioning elements
 
 ## 2. Metallic Hover Effect
+
+![metallic-hover-effect](https://github.com/Garth-brick/cool-elements/assets/92771830/9ef2cdb9-9707-4de3-9093-f4cdb3d525b0)
+
+Note: The actual effect looks a lot neater than this gif.
 
 This was inpired by hover effect on the grid cards which you can see on the [Features Page of Linear.app](https://linear.app/features) which is another breathtakingly beautiful website, although it isn't very responsive to mobile layouts.
 
